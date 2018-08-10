@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Button, WhiteSpace, WingBlank } from 'antd-mobile';
 import { add, minus, asyncAdd } from '../../actions/test'
-
+import "./index.scss"
 @connect(({ counter }) => ({
     counter
 }), (dispatch) => ({
@@ -28,7 +28,7 @@ class Index extends Component {
         return (
             <div>
                 <WingBlank>
-                    {this.props.counter.num}
+                    <span>{this.props.counter.num}</span> 
                     <WhiteSpace />
                     <Button
                         type="primary"
